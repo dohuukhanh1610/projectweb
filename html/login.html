@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+                <h1>MARKET</h1>
+            </div>
+            <div class="all-action">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search" id ="search">
+            </div>
+            <div class="actions">
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+                <div class="drop-down">
+                    <div class="history">
+                        <p>History</p>
+                    </div>
+                    <div class="logout">
+                        <p>Logout</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+    </header>
+    <div class="body">
+        <div class="container">
+                    <h3 class="title-login">Login</h3>
+            <table>
+                <form action="" class="login-form">
+                    <tr>
+                        <td><label for="email">Email Adress:</label></td>
+                        <td><input type="email" id="email" placeholder="you@gmail.com">
+                        <div class="error-message"></div></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" id="password" placeholder="********">
+                        <div class="error-message"></div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><a href="forgotPassWord.html">Forgot password?</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="button" type="submit">Login</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><p>Don't have an account? <a href="register.html">Sign up</a></p></td>
+                    </tr>
+                </form>
+            </table>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <h3>Thank you for visiting our website!</h3>
+            <hr style="opacity: 0.5;">
+            <p>&copy; 2026 MyPage. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="../js/login.js"></script>
+</body>
+</html>

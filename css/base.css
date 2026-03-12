@@ -1,0 +1,233 @@
+:root {
+    --color1: #425AF5;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    flex: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    opacity: 0.3;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: var(--color1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.body table tr .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: -15px;
+    padding-bottom: 5px;
+}
+
+/* HEADER */
+
+
+.header {
+    background-color: #D9D9D9;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.header .logo {
+    font-weight: bold;
+    color: var(--color1);
+    cursor: pointer;
+    width: 18%;
+}
+
+.header .logo h1 {
+    text-align: center;
+
+}
+
+.header .all-action {
+    display: flex;
+    gap: 5px;
+    width: 78%;
+    justify-content: flex-end;
+
+}
+
+.header .search {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    gap: 5px;
+    margin: 0 20px;
+
+}
+
+.header .search input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.header .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    flex: 0.5;
+}
+
+.header .actions .drop-down {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 35px;
+    background-color: #D9D9D9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.header .actions .drop-down .history,
+.header .actions .drop-down .logout {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.header .actions .drop-down .history:hover,
+.header .actions .drop-down .logout:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+.header .actions .active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header .actions i {
+    cursor: pointer;
+}
+
+.header .actions i:hover {
+    color: var(--color1);
+}
+
+.header .bars {
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
+.header .bars:hover {
+    color: var(--color1);
+}
+
+
+
+@media screen and (max-width: 576px) {
+
+
+    .header .bars {
+        display: flex;
+        order: 1;
+    }
+
+    .header .all-action {
+        display: none;
+    }
+
+    .header .active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .header .search {
+        margin: 0 10px;
+    }
+}
+
+/* BODY */
+.pagination .page-link:hover {
+    color: var(--color1);
+}
+
+/* RETURN */
+.body .back {
+    cursor: pointer;
+    display: flex;
+}
+
+.body .back:hover {
+    color: var(--color1);
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 30px;
+    background-color: #D9D9D9;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1500px) {}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}

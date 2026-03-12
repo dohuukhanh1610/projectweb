@@ -1,0 +1,120 @@
+/* BODY */
+.body {
+    padding: 30px 0;
+}
+
+.itemOrder {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid rgb(192, 192, 192);
+
+}
+
+.item-img {
+    flex: 1;
+}
+
+.item-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item-content {
+    flex: 1;
+    margin: 10px;
+}
+
+.item-content .item-title {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.item-content .item-review {
+    display: flex;
+    gap: 5px;
+}
+
+.item-content .item-review i {
+    color: yellow;
+}
+
+.item-content .item-price {
+    color: red;
+    font-size: 20px;
+}
+
+.item-content .item-quanlity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-content .item-quanlity .up,
+.item-content .item-quanlity .down {
+    background-color: var(--color1);
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--color1);
+}
+
+.item-content .item-quanlity .up:hover,
+.item-content .item-quanlity .down:hover {
+    background-color: white;
+    color: var(--color1);
+}
+
+.item-content .item-quanlity .page-number {
+    padding: 5px;
+    width: 10%;
+}
+
+.item-content .item-active {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item-content .item-active .button {
+    width: 25%;
+}
+
+.item-content .item-active .cart {
+    color: var(--color1);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.item-content .item-active .cart:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+.item-content .item-active .button:hover {
+    background-color: white;
+    color: var(--color1);
+}
+
+@media screen and (max-width: 576px) {
+
+    .itemOrder {
+        flex-direction: column;
+        margin: 20px 10px;
+    }
+
+    .item-img {
+        border: 0.5px solid rgb(200, 198, 198);
+    }
+}

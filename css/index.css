@@ -1,0 +1,169 @@
+/* BODY */
+.typeOfProducts {
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.typeOfProducts .all-item {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+
+.typeOfProducts .item {
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.typeOfProducts .item:hover {
+    color: var(--color1);
+}
+
+@media screen and (max-width: 576px) {
+    .typeOfProducts {
+        padding: 10px;
+    }
+}
+
+/* BANNER */
+.bannerSellOff {
+    background-color: var(--color1);
+    padding: 20px 25px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+    color: white;
+}
+
+.bannerSellOff .content {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.bannerSellOff .button {
+    background-color: white;
+    color: var(--color1);
+    border: 1px solid var(--color1);
+    font-weight: 700;
+}
+
+.bannerSellOff .button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--color1);
+}
+
+.bannerSellOff .shopNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SORT */
+.sortProduct {
+    margin: 20px 0;
+
+}
+
+.sortProduct #SortBy {
+    font-weight: 600;
+    font-size: 15px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* PRODUCTS */
+.products {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.products .product-item {
+    width: 48%;
+    border: 0.5px solid rgb(237, 236, 236);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.products .product-item:hover {
+    transform: translateY(-4px);
+}
+
+
+.products .product-item .item-content {
+    padding: 20px;
+}
+
+.products .product-item .item-img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.products .product-item .item-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+.products .product-item .item-img .sellOff {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color1);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+
+.products .product-item .review i {
+    color: yellow;
+}
+
+.products .product-item .option-buy {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.products .product-item .option-buy .button:hover {
+    background-color: white;
+    color: var(--color1);
+}
+
+.products .product-item .option-buy a {
+    color: var(--color1);
+}
+
+.products .product-item .option-buy a:hover {
+    background-color: var(--color1);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 576px) {
+    .products {
+        justify-content: center;
+    }
+
+    .products .product-item {
+        width: 95%;
+    }
+}
