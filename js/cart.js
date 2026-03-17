@@ -2,7 +2,7 @@ import { doc, getDoc, arrayRemove, updateDoc } from "https://www.gstatic.com/fir
 import { barClick, logoClick, search, cartClick, userClick, backToMenu, History } from "./base.js";
 import { db, auth } from "./firebase.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
-import { data } from "../data/data.js";
+import { data } from "/data/data.js";
 
 
 logoClick();
@@ -72,7 +72,7 @@ const buyItem = () => {
         btn.addEventListener('click', () => {
             let product = btn.closest('.item');
             let id = product.getAttribute('id');
-            location.href = `../html/order.html?id=${id}`
+            location.href = `/html/order.html?id=${id}`
         })
     })
 }

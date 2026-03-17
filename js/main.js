@@ -1,4 +1,4 @@
-import { data } from "../data/data.js";
+import { data } from "/data/data.js";
 import { logoClick, search, cartClick, pagination, barClick, userClick, Logout, History, currentUser } from "./base.js";
 import { doc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { db } from './firebase.js'
@@ -77,7 +77,7 @@ const productDetails = () => {
         if (Btn) {
             let product = Btn.closest('.product-item');
             let id = product.getAttribute('id');
-            location.href = `../html/order.html?id=${id}`
+            location.href = `/html/order.html?id=${id}`
         }
         if (cartBtn) {
             e.preventDefault();
@@ -85,7 +85,7 @@ const productDetails = () => {
             const id = product.getAttribute("id");
             if (!currentUser) {
                 alert('Vui long dang nhap!');
-                location.href = '../html/login.html';
+                location.href = '/html/login.html';
             }
             else {
                 try {

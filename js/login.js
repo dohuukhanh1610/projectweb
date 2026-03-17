@@ -57,7 +57,7 @@ function signIn() {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             alert('dang nhap thanh cong');
-            location.href = '../html/index.html';
+            location.href = '/html/index.html';
         })
         .catch((error) => {
             if (error.code === 'auth/invalid-email') {

@@ -1,4 +1,4 @@
-import { data } from "../data/data.js"
+import { data } from "/data/data.js"
 import { pagination } from "./base.js";
 export const drawProduct = (filterData = data.products) => {
     let htmls = ``;
