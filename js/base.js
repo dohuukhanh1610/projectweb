@@ -28,7 +28,7 @@ export function userClick() {
 export function logoClick() {
     let logo = document.querySelector(".logo");
     logo.addEventListener('click', () => {
-        location.href = 'index.html';
+        location.href = '../index.html';
     })
 }
 export function Logout() {
@@ -59,14 +59,14 @@ export function search() {
 
             if (!value) return;
 
-            location.href = `index.html?search=${value}`;
+            location.href = `../index.html?search=${value}`;
         }
     });
 }
 export function cartClick() {
     let cart = document.querySelector(".header .actions .cart");
     cart.addEventListener('click', () => {
-        location.href = 'cart.html';
+        location.href = '../html/cart.html';
     })
 }
 export function barClick() {
