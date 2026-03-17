@@ -99,14 +99,14 @@ const ProductAction = (id) => {
             }
             else {
                 alert('Vui long dang nhap!');
-                location.href = '/html/login.html';
+                location.href = '/login.html';
             }
         }
         if (cartBtn) {
             e.preventDefault();
             if (!currentUser) {
                 alert('Vui long dang nhap!');
-                location.href = '/html/login.html';
+                location.href = '/login.html';
             }
             else {
                 try {

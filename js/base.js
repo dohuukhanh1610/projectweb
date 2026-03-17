@@ -22,13 +22,13 @@ export function userClick() {
         if (currentUser)
             dropdown.classList.toggle('active');
         else
-            location.href = '/html/login.html';
+            location.href = '/login.html';
     })
 }
 export function logoClick() {
     let logo = document.querySelector(".logo");
     logo.addEventListener('click', () => {
-        location.href = '/html/index.html';
+        location.href = '/index.html';
     })
 }
 export function Logout() {
@@ -36,7 +36,7 @@ export function Logout() {
     logout.addEventListener('click', () => {
         signOut(auth).then(() => {
             alert('dang xuat thanh cong');
-            location.href = '/html/index.html';
+            location.href = '/index.html';
         })
             .catch((error) => {
                 alert('dang xuat khong thanh cong');
@@ -46,7 +46,7 @@ export function Logout() {
 export function History() {
     let history = document.querySelector('.drop-down .history');
     history.addEventListener('click', () => {
-        location.href = '/html/history.html';
+        location.href = '/history.html';
     })
 }
 
@@ -59,14 +59,14 @@ export function search() {
 
             if (!value) return;
 
-            location.href = `/html/index.html?search=${value}`;
+            location.href = `/index.html?search=${value}`;
         }
     });
 }
 export function cartClick() {
     let cart = document.querySelector(".header .actions .cart");
     cart.addEventListener('click', () => {
-        location.href = '/html/cart.html';
+        location.href = '/cart.html';
     })
 }
 export function barClick() {
@@ -114,7 +114,7 @@ export function pagination(filterData = data.products) {
 export const backToMenu = () => {
     let backBtn = document.querySelector('.back');
     backBtn.addEventListener('click', () => {
-        location.href = '../html/index.html';
+        location.href = '/index.html';
     })
 }
 

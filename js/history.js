@@ -72,7 +72,7 @@ const buyItem = () => {
         btn.addEventListener('click', () => {
             let product = btn.closest('.item');
             let id = product.getAttribute('id');
-            location.href = `/html/order.html?id=${id}`
+            location.href = `/order.html?id=${id}`
         })
     })
 }

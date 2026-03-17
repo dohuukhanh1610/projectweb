@@ -77,7 +77,7 @@ const productDetails = () => {
         if (Btn) {
             let product = Btn.closest('.product-item');
             let id = product.getAttribute('id');
-            location.href = `/html/order.html?id=${id}`
+            location.href = `/order.html?id=${id}`
         }
         if (cartBtn) {
             e.preventDefault();
@@ -85,7 +85,7 @@ const productDetails = () => {
             const id = product.getAttribute("id");
             if (!currentUser) {
                 alert('Vui long dang nhap!');
-                location.href = '/html/login.html';
+                location.href = '/login.html';
             }
             else {
                 try {

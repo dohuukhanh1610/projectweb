@@ -76,5 +76,5 @@ const handleSignUp = async () => {
 
     }
 
-    location.href = '../html/index.html'
+    location.href = '/index.html'
 }
