@@ -1,4 +1,4 @@
-import { data } from "/data/data.js";
+import { data } from "../data/data.js";
 import { auth, db } from "./firebase.js";
 import { barClick, logoClick, search, cartClick, userClick, backToMenu, currentUser, History } from "./base.js";
 import { doc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
@@ -99,14 +99,14 @@ const ProductAction = (id) => {
             }
             else {
                 alert('Vui long dang nhap!');
-                location.href = '/login.html';
+                location.href = '../html/login.html';
             }
         }
         if (cartBtn) {
             e.preventDefault();
             if (!currentUser) {
                 alert('Vui long dang nhap!');
-                location.href = '/login.html';
+                location.href = '../html/login.html';
             }
             else {
                 try {
