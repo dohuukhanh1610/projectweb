@@ -18,10 +18,10 @@ onAuthStateChanged(auth, async (user) => {
         currentUser = user;
         const docRef = doc(db, "user", currentUser.uid);
         const docSnap = await getDoc(docRef);
-        const ids = docSnap.data().ids;
+        const idBuy = docSnap.data().idBuy;
 
         let listProducts = data.products.filter(product =>
-            ids.includes(product.id.toString()))
+            idBuy.includes(product.id.toString()))
         let htmls = ``;
         listProducts.map(item => {
             htmls += `<div class="item" id="${item.id}">
@@ -59,7 +59,7 @@ const deleteItem = () => {
             let product = btn.closest('.item');
             let id = product.getAttribute('id');
             await updateDoc(doc(db, "user", currentUser.uid), {
-                ids: arrayRemove(id)
+                idBuy: arrayRemove(id)
             });
             product.remove();
         })

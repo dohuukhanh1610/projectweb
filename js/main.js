@@ -1,9 +1,7 @@
 import { data } from "../data/data.js";
-import { drawProduct } from "./drawProducts.js";
-
-
-import { logoClick, search, cartClick, pagination, barClick, userClick, Logout } from "./base.js";
-
+import { logoClick, search, cartClick, pagination, barClick, userClick, Logout, History, currentUser } from "./base.js";
+import { doc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { db } from './firebase.js'
 function typeOfProducts() {
     let string = new Set();
     data.products.forEach(element => {
@@ -72,6 +70,41 @@ if (keyword) {
     );
 }
 
+const productDetails = () => {
+    document.addEventListener('click', async (e) => {
+        const Btn = e.target.closest('.option-buy .button');
+        const cartBtn = e.target.closest('.option-buy .cart');
+        if (Btn) {
+            let product = Btn.closest('.product-item');
+            let id = product.getAttribute('id');
+            location.href = `../html/order.html?id=${id}`
+        }
+        if (cartBtn) {
+            e.preventDefault();
+            const product = cartBtn.closest(".product-item");
+            const id = product.getAttribute("id");
+            if (!currentUser) {
+                alert('Vui long dang nhap!');
+                location.href = '../html/login.html';
+            }
+            else {
+                try {
+                    await getID(id);
+                    alert('Da them vao gio hang thanh cong');
+                } catch (error) {
+                    alert(error);
+                }
+            }
+        }
+    })
+
+}
+async function getID(id) {
+    await updateDoc(doc(db, "user", currentUser.uid), {
+        ids: arrayUnion(id)
+    });
+}
+
 pagination(products);
 logoClick();
 Logout();
@@ -81,3 +114,5 @@ bannerBigSell();
 sortBy();
 barClick();
 userClick();
+History();
+productDetails();

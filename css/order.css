@@ -75,7 +75,7 @@
     color: var(--color1);
 }
 
-.item-content .item-quanlity .page-number {
+.item-content .item-quanlity .quanlity-input {
     padding: 5px;
     width: 10%;
 }

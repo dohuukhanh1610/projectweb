@@ -3,7 +3,7 @@ import { pagination } from "./base.js";
 export const drawProduct = (filterData = data.products) => {
     let htmls = ``;
     filterData.forEach(element => {
-        htmls += `<div class="product-item">
+        htmls += `<div class="product-item" id="${element.id}">
                     <div class="item-img">
                     <img src="${element.thumbnail}" alt="img">
                     <div class="sellOff">${element.discountPercentage}%</div>

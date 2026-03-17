@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/cartNhistory.css">
 </head>
 <body>
     <header class="header">
@@ -39,44 +39,59 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
     </header>
-    <body>
-        
-        <div class="typeOfProducts">
-            <div class="container">
-           <div class="all-item">
-
-           </div>
-           </div>
-        </div>
+    <div class="body">
         <div class="container">
-        <div class="bannerSellOff">
-            <div class="content">
-                <h2>Big Sale</h2>
-                <p>Up to 20% off on selected items!</p>
+            <div class="back">
+                <i class="fa-solid fa-arrow-left-long"></i>
+                <span>Back to Menu</span>
             </div>
-            <div class="shopNow">
-            <button class="button">Shop Now</button>
+            <div class="CartProducts">
+                <div class="item">
+                <div class="item-img">
+                    <img src="" alt="img">
+                </div>
+                <div class="item-content">
+                    <div class="title">
+                        item1
+                    </div>
+                    <hr>
+                    <div class="price">
+                        1222$
+                    </div>
+                    <hr>
+                    <div class="button">
+                        Buy
+                    </div>
+                    <div class="deleteItem">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                </div>
+                <div class="item">
+                <div class="item-img">
+                    <img src="" alt="img">
+                </div>
+                <div class="item-content">
+                    <div class="title">
+                        item1
+                    </div>
+                    <hr>
+                    <div class="price">
+                        1222$
+                    </div>
+                    <hr>
+                    <div class="button">
+                        Buy
+                    </div>
+                    <div class="deleteItem">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                </div>
             </div>
-        </div>
-        <div class="sortProduct">
-            <select name="SortBy" id="SortBy">
-                <option value="default" selected >Sort by</option>
-                <option value="LtH">Price: Low to High</option>
-                <option value="HtL">Price: High to Low</option>
-                <option value="BestRated">Best Rated</option>
-            </select>
-        </div>
-        
-        <div class="products">
-                
-        </div>
-        <div class="pagination">
-                <div class="page-link prev"><<</div>
-                <div class="page-link active">1</div>
-                <div class="page-link next">>></div>
-        </div>
-        </div>
-    </body>
+            
+    </div>
+    </div>
     <footer class="footer">
         <div class="container">
             <h3>Thank you for visiting our website!</h3>
@@ -84,6 +99,6 @@
             <p>&copy; 2026 MyPage. All rights reserved.</p>
         </div>
     </footer>
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/history.js"></script>
 </body>
 </html>

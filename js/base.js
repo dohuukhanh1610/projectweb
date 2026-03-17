@@ -4,6 +4,7 @@ import { auth } from "./firebase.js";
 import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-auth.js";
 
 
+
 let currentUser = null;
 onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -12,7 +13,7 @@ onAuthStateChanged(auth, (user) => {
         currentUser = null;
     }
 });
-
+export { currentUser };
 export function userClick() {
 
     let user = document.querySelector('.header .all-action .user i');
@@ -42,6 +43,12 @@ export function Logout() {
             });
     })
 }
+export function History() {
+    let history = document.querySelector('.drop-down .history');
+    history.addEventListener('click', () => {
+        location.href = '../html/history.html';
+    })
+}
 
 export function search() {
     const input = document.querySelector(".search input");
@@ -69,6 +76,11 @@ export function barClick() {
         actions.classList.toggle("active");
     })
 }
+
+
+
+
+
 export function pagination(filterData = data.products) {
     let prev = document.querySelector(".pagination .prev");
     let next = document.querySelector(".pagination .next");
@@ -98,5 +110,11 @@ export function pagination(filterData = data.products) {
             renderPage(pageNumber + 1);
         }
     }
+}
+export const backToMenu = () => {
+    let backBtn = document.querySelector('.back');
+    backBtn.addEventListener('click', () => {
+        location.href = '../html/index.html';
+    })
 }
 
