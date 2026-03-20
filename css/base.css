@@ -193,6 +193,12 @@ a {
     .header .search {
         margin: 0 10px;
     }
+
+    .header .actions .drop-down {
+        top: 135px;
+        right: 10px;
+        width: 70px;
+    }
 }
 
 /* BODY */

@@ -1,6 +1,7 @@
 import { auth } from "./firebase.js";
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 import { barClick, logoClick, search, cartClick, userClick } from "./base.js";
+// import {  sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 barClick();
 logoClick();
@@ -39,6 +40,7 @@ const validator = () => {
         })
         if (!checkAll) {
             alert('vui long nhap du thong tin');
+            return;
         }
         else {
             signIn();
@@ -49,21 +51,36 @@ const validator = () => {
 }
 
 validator();
-function signIn() {
+async function signIn() {
 
 
     let email = document.querySelector('#email').value;
     let password = document.querySelector('#password').value;
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            alert('dang nhap thanh cong');
-            location.href = '../index.html';
-        })
-        .catch((error) => {
-            if (error.code === 'auth/invalid-email') {
-                alert('khong tim thay tai khoan, vui long dang ky');
+    try {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
+        if (!user.emailVerified) {
+            let createDate = new Date(user.metadata.creationTime);
+            let timePassed = (Date.now() - createDate);
+            if (timePassed > (24 * 60 * 60 * 1000)) {
+                await user.delete();
+                alert('Da qua thoi gian xac thuc, vui long dang ki lai!');
+                location.href = '../html/register.html'
             }
-            alert('thong tin dang nhap sai, vui long dang nhap lai');
-        });
+            else {
+                signOut(auth);
+                alert('Tai khoan ban chua xac thuc, vui long xac thuc de dang nhap !')
+            }
+        }
+        else {
+            alert('Dang nhap thanh cong!')
+            location.href = '../index.html';
+        }
+    } catch (error) {
+        if (error.code === 'auth/invalid-email') {
+            alert('khong tim thay tai khoan, vui long dang ky');
+        }
+        alert('thong tin dang nhap sai, vui long dang nhap lai');
+    }
 
 }

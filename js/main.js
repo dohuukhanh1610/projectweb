@@ -77,7 +77,7 @@ const productDetails = () => {
         if (Btn) {
             let product = Btn.closest('.product-item');
             let id = product.getAttribute('id');
-            location.href = `../html/order.html?id=${id}`
+            location.href = `../html/order.html?id=${id}`;
         }
         if (cartBtn) {
             e.preventDefault();

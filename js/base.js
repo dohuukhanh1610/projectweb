@@ -34,10 +34,11 @@ export function logoClick() {
 export function Logout() {
     let logout = document.querySelector('.header .user .logout');
     logout.addEventListener('click', () => {
-        signOut(auth).then(() => {
-            alert('dang xuat thanh cong');
-            location.href = '../index.html';
-        })
+        signOut(auth)
+            .then(() => {
+                alert('dang xuat thanh cong');
+                location.href = '../index.html';
+            })
             .catch((error) => {
                 alert('dang xuat khong thanh cong');
             });
